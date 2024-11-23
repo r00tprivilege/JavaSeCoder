@@ -38,9 +38,7 @@ When designing CSRF tokens, developers should ensure that they meet the followin
 - Kept **secret**.
 - **Unpredictable**, typically generated using a secure method.
 
-{% hint style="danger" %}
 **CSRF tokens** must **NOT** be sent via cookies.
-{% endhint %}
 
 **CSRF tokens** can be included using hidden fields, headers, and applied to forms or AJAX requests. It's crucial to ensure there are no unintended exposures, such as through server logs or URLs. Below is an example of implementing a token in a form.
 

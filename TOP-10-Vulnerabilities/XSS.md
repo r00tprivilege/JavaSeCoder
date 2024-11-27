@@ -88,9 +88,7 @@ Customization:
 If the developer explicitly wants to render raw HTML (not recommended without validation), they can use th:utext. However, this bypasses the escaping mechanism and must be used cautiously.
 
 
-{% hint style="danger" %}
 Although **front-end frameworks generally escape dynamic content by default,** this only applies to **displaying the content**. When using dynamic data in attributes like `<a href={...}>` or `<img src={...}>`, developers must **implement additional defensive measures** to ensure the data is properly escaped and sanitized.
-{% endhint %}
 
 ### 2.1.2. Implementing CSP Headers \[Content Security Policy]:
 

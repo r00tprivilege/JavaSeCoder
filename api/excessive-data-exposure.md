@@ -142,11 +142,8 @@ In short, make sure to follow that:
 * **Avoid client-side data filtering** for sensitive information; ensure this is handled at the API level.
 * Selectively include only the necessary properties in your response.
 
-{% hint style="info" %}
 You can find more details about this topic here:
-
 * [CWE-200: Exposure of Sensitive Information to an Unauthorized Actor](https://cwe.mitre.org/data/definitions/200.html)
-{% endhint %}
 * [Excessive Data Exposure](https://raw.githubusercontent.com/OWASP/API-Security/master/2019/en/dist/owasp-api-security-top-10.pdf)
 
 

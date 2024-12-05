@@ -122,10 +122,7 @@ POST /api/reset-password
 
 An attacker successfully updates `role` into `admin`, it means; privileges escalatiion. 
 
-{% hint style="warning" %}
 This example represents a common attack scenario, and it's evident that there are numerous other ways to exploit this vulnerability (such as altering another user's password, email, username, etc.).
-{% endhint %}
-
 ## 3. Mitigations:
 
 To safeguard against such vulnerabilities in a Spring Boot application with an Oracle database, it is essential to use a schema validation framework and carefully control which fields are updated. Here's how you can approach this:
@@ -259,11 +256,8 @@ Following these essential points will defend your endpoints against Mass Assignm
 * Approach framework methods with caution and ensure you thoroughly understand their documentation.
 * Clearly define and enforce all expected schemas and data types at both design and runtime stages.
 
-{% hint style="info" %}
 for more details :
-
 * [CWE-915: Improperly Controlled Modification of Dynamically-Determined Object Attributes](https://cwe.mitre.org/data/definitions/915.html)
 * [Mass Assignment](https://raw.githubusercontent.com/OWASP/API-Security/master/2019/en/dist/owasp-api-security-top-10.pdf)
 * [Mass Assignment Application Security](https://application.security/free-application-security-training/owasp-top-10-api-mass-assignment)
-{% endhint %}
 

@@ -8,14 +8,12 @@ Insecure redirects and forwards occur when a web application processes user-prov
 
 A common example of vulnerable code involves accepting a `url` parameter and using it to redirect the user without proper validation.
 
-{% tab title="Java" %}
 ```java
 ...
 response.sendRedirect(request.getParameter("url"));
 ...
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ## 3. Mitigations:
 
@@ -25,7 +23,6 @@ However, in this particular case, input validation isn’t even necessary. Since
 
 Check the `Java` tab in the code example below to see an approach that avoids hardcoding the `url` while still securely constructing it.
 
-{% tab title="Java" %}
 ```java
 
 // build the redirectURL based on the hostname lookup
@@ -39,8 +36,6 @@ StringBuilder redirectUrl = new StringBuilder()
 //
 response.sendRedirect(redirectUrl);
 ```
-{% endtab %}
-{% endtabs %}
 
 ## 4. Takeaways:
 
@@ -53,11 +48,9 @@ To use redirects and forwards securely, consider the following best practices:
   - This list should follow an **allow-list approach** rather than relying on a block list.  
 - Implement intermediate pages for all redirects to **notify users** that they are leaving your site, clearly display the destination, and require **explicit confirmation via a clickable link.**  
 
-{% hint style="info" %}
 More details:
 
 * [Unvalidated Redirects and Forwards](https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html)
-{% endhint %}
 * [Open redirection \(reflected\)](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
 * [Insecure URL Redirect](https://application.security/free-application-security-training/owasp-top-10-insecure-url-redirect)
 

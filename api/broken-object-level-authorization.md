@@ -149,9 +149,7 @@ class SecretsHandler {
 ```
 In this Java Spring Boot version, the SecretsController class handles GET requests to the /api/secrets endpoint. It checks if the userId is present in the session, and if not, it returns a 403 Forbidden status. If the userId is found, it retrieves user details and secrets and returns them in the response. You'll need to implement the logic for the User, Secret, UserHandler, and SecretsHandler classes as needed.
 
-{% hint style="danger" %}
 Ensure all HTTP methods for each endpoint are secured. It is a common practice for developers to protect the GET requests on a specific endpoint, but often the DELETE, POST, and PUT requests remain vulnerable.
-{% endhint %}
 
 ### 3.2. Working without Access Control:
 
@@ -163,9 +161,7 @@ While not ideal, you could implement a "security through obscurity" approach. Th
 
 Establishing a solid access control policy, coupled with flawless session management, can effectively mitigate the majority of **Broken Object Level Authorization** issues.
 
-{% hint style="info" %}
 More details:
 * [What is Broken Object Level Authorization ](https://www.wallarm.com/what/broken-object-level-authorization)
 * [OWASP API SECURITY](https://owasp.org/www-project-api-security/)
-{% endhint %}
 

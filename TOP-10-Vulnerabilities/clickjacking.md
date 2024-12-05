@@ -54,10 +54,8 @@ Both `X-Frame-Options` and `Content-Security-Policy` headers are essential for p
 
 As this is more about server-side configuration than vulnerable code, explore this [interactive resource](https://application.security/free-application-security-training/owasp-top-10-clickjacking) for a deeper understanding of clickjacking behavior and mitigation techniques.  
 
-{% hint style="info" %}
 More details about this topic here:
 * [What is clickjacking?](https://portswigger.net/web-security/clickjacking)
-{% endhint %}\
 * [Clickjacking Defense \[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html#defending-with-content-security-policy-csp-frame-ancestors-directive)
 * [Clickjacking  \| Kontra exercise](https://application.security/free-application-security-training/owasp-top-10-clickjacking)
 

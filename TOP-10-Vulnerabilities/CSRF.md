@@ -18,9 +18,9 @@ Since not every action has a direct HTTP method mapping (e.g., fetching = **`GET
 
 This is considered one of the most effective methods for properly mitigating CSRF.
 
-{% hint style="info" %}
+
 **CSRF tokens protect against CSRF attacks** because, without them, **an attacker is unable to generate valid requests** to the **backend server**.
-{% endhint %}
+
 
 Here are several techniques and use cases for utilizing these tokens.
 
@@ -55,9 +55,7 @@ Managing state for CSRF tokens can sometimes be challenging, making the double s
 
 In this approach, when a user visits the website (ideally before authentication), the server securely generates a token and sets it as a cookie in the user's browser. For every subsequent request, the application requires the token to be included as a hidden value in the form. On the server side, the request is validated by comparing the value from the hidden form field with the value stored in the cookie. If the two match, the request is deemed legitimate; otherwise, it is rejected.
 
-{% hint style="info" %}
 It’s important to note that this technique is more of a workaround and is best combined with additional security measures, such as encrypting the cookies or utilizing [**HMAC**](https://www.nedmcclain.com/better-csrf-protection/) for enhanced protection.
-{% endhint %}
 
 ### 2.3. Using Custom Request Headers:
 
@@ -245,11 +243,10 @@ This setup ensures that CSRF protection is enabled and that CSRF tokens are secu
 
 Defending against CSRF is a multi-faceted challenge that requires developers to adhere to the **REST architecture** while ensuring the implementation of mandatory CSRF tokens. While following established security practices is crucial in application security, developers can also leverage **CSRF protection middleware** as an additional layer of defense.
 
-{% hint style="info" %}
 Find more details about this topic here:
 
 * [Should I use CSRF protection on Rest API endpoints?](https://security.stackexchange.com/questions/166724/should-i-use-csrf-protection-on-rest-api-endpoints/166798#166798)
 * [CSRF Protection Cheatsheet \[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html#javascript-guidance-for-auto-inclusion-of-csrf-tokens-as-an-ajax-request-header)
 * [Preventing CSRF](https://auth0.com/blog/cross-site-request-forgery-csrf/)
-{% endhint %}
+
 

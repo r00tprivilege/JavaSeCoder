@@ -115,9 +115,7 @@ In these attacks, the victim is tricked into **clicking a malicious link**, subm
 
 This mitigation is similar to the one discussed in **2.1.1.** Whether the dynamic content originates from the backend/database or the HTTP request, it is **escaped in the same manner**. Fortunately, modern front-end templates automatically escape all variables, regardless of their source (whether from the HTTP request or the backend).
 
-{% hint style="warning" %}
 Reflected XSS often targets areas such as search pages and error pages, as they display parts of the **query string back to the user**.
-{% endhint %}
 
 ## 2.3. Document Object Model \[DOM]-Based XSS:
 
@@ -125,9 +123,7 @@ Reflected XSS often targets areas such as search pages and error pages, as they 
 
 While **Reflected** and **Stored XSS** are _server-side_ injection issues, **DOM-based XSS** is a _client-side_ (browser) issue. In **Reflected/Stored** XSS, the attack is injected into the application during the **server-side** processing of requests, where untrusted input is **dynamically** incorporated into HTML. For **DOM XSS**, the attack occurs during runtime on the **client side** directly within the browser.
 
-{% hint style="info" %}
 Check out [**this great resource on DOM XSS**](https://domgo.at/cxss/intro) for an in-depth look at analyzing source code and identifying vulnerabilities.
-{% endhint %}
 
 ### 2.3.1. Vulnerable Code Sample:
 
@@ -390,7 +386,6 @@ You can use sanitizeHTML along with escapeHTML for added security when handling 
 
 This approach ensures that both stored and reflected XSS vulnerabilities are mitigated, similar to the JavaScript example you provided, but on the server side using Java Spring Boot.
 
-{% hint style="info" %}
 You can find more details about this topic here:
 
 * [Stored XSS Example](https://application.security/free-application-security-training/owasp-top-10-stored-cross-site-scripting)
@@ -399,4 +394,3 @@ You can find more details about this topic here:
 * [XSS Prevention Cheatsheet\[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/Cross\_Site\_Scripting\_Prevention\_Cheat\_Sheet.html)
 * [DOM XSS Prevention Cheatsheet\[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/DOM\_based\_XSS\_Prevention\_Cheat\_Sheet.html)
 * [What is DOM-based XSS?](https://portswigger.net/web-security/cross-site-scripting/dom-based)
-{% endhint %}

@@ -73,11 +73,14 @@ Explanation of Escaping in Spring Boot:
 Dynamic Content Handling:
 
 In Thymeleaf, when you use th:text to render dynamic content, it escapes special characters like <, >, and " by default. This ensures that content such as <script>alert('Hey')</script> is rendered as text rather than executable code in the browser.
-Automatic Escaping:
+Automatic Escaping: 
 
-The escaping process converts special characters into their HTML entities. For example:
+The escaping process converts special characters into their HTML entities. 
+
+For example:
 < becomes &lt;
 > becomes &gt;
+
 This prevents the browser from interpreting the content as raw HTML or JavaScript.
 
 Safe by Default:
